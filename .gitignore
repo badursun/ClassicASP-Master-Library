@@ -1,0 +1,8 @@
+### Dosyalar ###
+ftpsync.settings
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### Klasörler ###
+_other/

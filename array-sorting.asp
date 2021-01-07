@@ -1,7 +1,23 @@
-```asp
 <%
-	' https://www.dotnetperls.com/arraylist
+'**********************************************
+'**********************************************
+'               _ _                 
+'      /\      | (_)                
+'     /  \   __| |_  __ _ _ __  ___ 
+'    / /\ \ / _` | |/ _` | '_ \/ __|
+'   / ____ \ (_| | | (_| | | | \__ \
+'  /_/    \_\__,_| |\__,_|_| |_|___/
+'               _/ | Digital Agency
+'              |__/ 
+' 
+'* Project  : RabbitCMS
+'* Developer: <Anthony Burak DURSUN>
+'* E-Mail   : badursun@adjans.com.tr
+'* Corp     : https://adjans.com.tr
+'**********************************************
+'**********************************************
 
+Function SortArray(vArr, vSort)
     If (typeName(vArr) <> "Variant()" OR UBound(vArr) = 0) Then 
     	Exit Function
     End If
@@ -19,14 +35,17 @@
 			Case Else 
 		End Select
 		
-		' SortArray = outputLines ' List Çıktı
-		' SortArray = outputLines.ToString ' String Çıktı
 		SortArray = outputLines.ToArray ' Array Çıktı
 
 	Set outputLines = Nothing
 End Function
 
-MyArray = Array(1,5,9,7,3,2)
+
+'**********************************************
+' Demo
+'**********************************************
+Dim MyArray
+	MyArray = Array(1,5,9,7,3,2)
 
 tmp_data = MyArray
 Response.Write "<h4>Default Array</h4>"
@@ -42,19 +61,4 @@ tmp_data = SortArray(MyArray, "DESC")
 Response.Write "<h4>Sorted Array (ASC)</h4>"
 Response.Write Join(tmp_data)
 Response.Write "<hr>"
-
-
-' MyArray = Array(1,5,9,7,3,2)
-' Set outputLines = CreateObject("System.Collections.ArrayList")
-' 	outputLines.Add 5
-' 	outputLines.Add 3
-' 	outputLines.Add 7
-' 	outputLines.Add 10
-' 	outputLines.Sort()
-' 	' outputLines.Reverse()
-' 	For Each outputLine in outputLines
-' 	    Response.Write outputLine & "<br>"
-' 	Next
-' Set outputLines = Nothing
 %>
-```
