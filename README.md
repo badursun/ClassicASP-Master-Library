@@ -5,9 +5,10 @@ For a better world...
 To be prepared
 
 # How To Use
-### Array Sorting (array-sorting.asp)
+### Array Sorting [array-sorting.asp](/blob/main/array-sorting.asp)
 Uses the System.Collections.ArrayList object to sort the array.
 [Demo](https://aspmasterlibrary.adjans.com.tr/array-sorting.asp)
+* Check this repo for ready Class : [Sorting Class for ClassicASP](https://github.com/badursun/Sorting-Scripting-Dictionary-Classic-ASP)
 
 #### Code Usage
 ```asp
