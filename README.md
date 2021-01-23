@@ -32,4 +32,34 @@ Response.Write Join(tmp_data) & "<hr>"
 %>
 ```
 
+### Object and Property Exist Control [object-exist-checker.asp](object-exist-checker.asp)
+Uses Native Javascript runat Server method and return object exist. If object exist, return true, else return false value.
+[Demo](https://aspmasterlibrary.adjans.com.tr/object-exist-checker.asp)
+#### Code Usage
+```asp
+<%
+Set Checker = New CheckerClass
 
+	' Not Exist Class: SomeClass
+	'------------------------------------
+	Set objClass = Eval("New SomeClass")
+	If Checker.ClassExist(objClass) = True Then
+		Response.Write "<span style=""color:green"">Exist</span><br>"
+	Else
+		Response.Write "<span style=""color:red"">Not Exist</span><br>"
+	End If
+	Set objClass = Nothing
+
+	' Not Exist Property in Class: SomeClass.SomeProperty
+	'------------------------------------
+	Set objClass = Eval("New SomeClass")
+	If Checker.ObjectExist(objClass, "SomeProperty") = True Then
+		Response.Write "<span style=""color:green"">Exist</span><br>"
+	Else
+		Response.Write "<span style=""color:red"">Not Exist</span><br>"
+	End If
+	Set objClass = Nothing
+
+Set Checker = Nothing
+%>
+```
