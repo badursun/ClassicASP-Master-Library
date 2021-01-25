@@ -75,6 +75,50 @@ Set Checker = Nothing
 ```
 </details>
 
+### (3) Do While Usage With MySQL [do-while-with-table.asp](do-while-with-table.asp)
+	It shows making a MySQL database connection and spreading a table to the screen with a loop.
+	Demo Not found!
+<details>
+<summary>
+<a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;Show code usage</a> 
+</summary>
 
+```asp
 
+<%
+Set rsObj = Conn.Execute("SELECT * FROM tbl_name ORDER BY col_name ASC")
+If rsObj.Eof Then
+	' No Record Found in tbl_name
+Else
+    Do While Not rsObj.Eof
+    	' Your Looping Code
+    rsObj.MoveNext : Loop
+End If
+rsObj.Close : Set rsObj = Nothing
+%>
+```
+</details>
+
+### (4) MySQL Connection On ClassicASP [mysql-connection.asp](mysql-connection.asp)
+	How do I make a connection to a MySQL database using ASP?
+<details>
+<summary>
+<a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;Show code usage</a> 
+</summary>
+
+```asp
+
+<%
+Set rsObj = Conn.Execute("SELECT * FROM tbl_name ORDER BY col_name ASC")
+If rsObj.Eof Then
+	' No Record Found in tbl_name
+Else
+    Do While Not rsObj.Eof
+    	' Your Looping Code
+    rsObj.MoveNext : Loop
+End If
+rsObj.Close : Set rsObj = Nothing
+%>
+```
+</details>
 
