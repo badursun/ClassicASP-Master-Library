@@ -6,6 +6,8 @@
 
 - [x] Array Sorting
 - [x] Object and Property Exist Control
+- [x] Do While Usage With MySQL
+- [x] MySQL Connection On ClassicASP
 
 
 ## How To Use
