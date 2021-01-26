@@ -12,9 +12,9 @@
 
 ## How To Use
 ### (1) Array Sorting [array-sorting.asp](array-sorting.asp)
-Uses the System.Collections.ArrayList object to sort the array.
-[Demo](https://aspmasterlibrary.adjans.com.tr/array-sorting.asp)
-Check this repo for ready Class : [Sorting Class for ClassicASP](https://github.com/badursun/Sorting-Scripting-Dictionary-Classic-ASP)
+	Uses the System.Collections.ArrayList object to sort the array.
+	[Demo](https://aspmasterlibrary.adjans.com.tr/array-sorting.asp)
+	Check this repo for ready Class : [Sorting Class for ClassicASP](https://github.com/badursun/Sorting-Scripting-Dictionary-Classic-ASP)
 <details>
 <summary>
 <a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;Show code usage</a> 
