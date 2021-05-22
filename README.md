@@ -4,11 +4,15 @@
 ## List Of Library
 > Main headings and details you will find in this repo. Some code samples and comments may not be complete. Check the checkboxes on the side.
 
-- [x] Array Sorting
-- [x] Object and Property Exist Control
-- [x] Do While Usage With MySQL
-- [x] MySQL Connection On ClassicASP
+- [x] Array Sorting (CF)
+- [x] Object and Property Exist Control (CL)
+- [x] Do While Usage With MySQL (SC)
+- [x] MySQL Connection On ClassicASP (SC)
+- [x] Determine date is Weekend or Weekday (CF)
 
+----------------
+PS: CF=Custom Function F=Function CL=Class SC=Sample Code
+----------------
 
 ## How To Use
 ### (1) Array Sorting [array-sorting.asp](array-sorting.asp)
