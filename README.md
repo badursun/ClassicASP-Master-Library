@@ -113,21 +113,37 @@ rsObj.Close : Set rsObj = Nothing
 
 ```asp
 <%
-Set rsObj = Conn.Execute("SELECT * FROM tbl_name ORDER BY col_name ASC")
-If rsObj.Eof Then
-	' No Record Found in tbl_name
-Else
-    Do While Not rsObj.Eof
-    	' Your Looping Code
-    rsObj.MoveNext : Loop
+On Error Resume Next
+
+' Define Your DB Conneciton
+Const conn_db_name = "your_db_name"
+Const conn_db_user = "your_db_user"
+Const conn_db_pass = "your_db_pass"
+Const conn_db_addr = "your_db_address" ' Usually localhost but use 127.0.0.1 for performance
+
+' Set Conn object to db
+Set Conn = Server.CreateObject("ADODB.Connection")
+    Conn.Open = "DRIVER={MySQL ODBC 3.51 Driver};database="& Db &";server="& ServerIP &";uid="& User &";password="& Pass &";"
+    Conn.Execute "SET NAMES 'utf8mb4'"
+    Conn.Execute "SET CHARACTER SET utf8mb4"
+    Conn.Execute "SET COLLATION_CONNECTION = 'utf8mb4_general_ci'"
+
+If Err<> 0 Then 
+    Response.Write "Database connection failed. Check your conn_ information"
+    Repsonse.End
 End If
-rsObj.Close : Set rsObj = Nothing
+
+' Do Some Stuff With Your DB. Can access db object via 'Conn' object
+
+' Release Connection Object
+Set Conn = Nothing
 %>
 ```
 </details>
 
 ### (5) Determine WeekEnd or WeekDay with Classic ASP Function [is-weekend-function.asp](is-weekend-function.asp)
 	How do I determine the date is weekend or weekday?
+	[Demo](https://aspmasterlibrary.adjans.com.tr/is-weekend-function.asp)
 <details>
 <summary>
 <a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;Show code usage</a> 
