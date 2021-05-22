@@ -86,7 +86,6 @@ Set Checker = Nothing
 </summary>
 
 ```asp
-
 <%
 Set rsObj = Conn.Execute("SELECT * FROM tbl_name ORDER BY col_name ASC")
 If rsObj.Eof Then
@@ -109,7 +108,6 @@ rsObj.Close : Set rsObj = Nothing
 </summary>
 
 ```asp
-
 <%
 Set rsObj = Conn.Execute("SELECT * FROM tbl_name ORDER BY col_name ASC")
 If rsObj.Eof Then
@@ -123,4 +121,31 @@ rsObj.Close : Set rsObj = Nothing
 %>
 ```
 </details>
+
+### (5) Determine WeekEnd or WeekDay with Classic ASP Function [is-weekend-function.asp](is-weekend-function.asp)
+	How do I determine the date is weekend or weekday?
+<details>
+<summary>
+<a class="btnfire small stroke"><em class="fas fa-chevron-circle-down"></em>&nbsp;&nbsp;Show code usage</a> 
+</summary>
+
+```asp
+<%
+IsWeekend(Date()) ' return true Or false
+
+If IsWeekend(Date()) = True Then 
+	Response.Write "Yes, It's weekend"
+Else
+	Response.Write "No, It's weekday"
+End If
+%>
+```
+</details>
+
+
+
+
+
+
+
 
